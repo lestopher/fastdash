@@ -1,0 +1,3 @@
+== FastDash
+
+FastDash is a quick and dirty dashboarding tool. To get started, fork, run, connect, and build. Enjoy :)
