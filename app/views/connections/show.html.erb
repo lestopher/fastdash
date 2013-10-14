@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @connection.host %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @connection.port %>
+</p>
+
+<p>
+  <strong>Socket:</strong>
+  <%= @connection.socket %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @connection.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @connection.password %>
+</p>
+
+<p>
+  <strong>Database:</strong>
+  <%= @connection.database %>
+</p>
+
+<p>
+  <strong>Encoding:</strong>
+  <%= @connection.encoding %>
+</p>
+
+<%= link_to 'Edit', edit_connection_path(@connection) %> |
+<%= link_to 'Back', connections_path %>

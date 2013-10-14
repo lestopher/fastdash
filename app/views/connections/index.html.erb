@@ -1,0 +1,39 @@
+<h1>Listing connections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Host</th>
+      <th>Port</th>
+      <th>Socket</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Database</th>
+      <th>Encoding</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @connections.each do |connection| %>
+      <tr>
+        <td><%= connection.host %></td>
+        <td><%= connection.port %></td>
+        <td><%= connection.socket %></td>
+        <td><%= connection.username %></td>
+        <td><%= connection.password %></td>
+        <td><%= connection.database %></td>
+        <td><%= connection.encoding %></td>
+        <td><%= link_to 'Show', connection %></td>
+        <td><%= link_to 'Edit', edit_connection_path(connection) %></td>
+        <td><%= link_to 'Destroy', connection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Connection', new_connection_path %>

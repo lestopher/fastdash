@@ -1,4 +1,8 @@
 Fastdash::Application.routes.draw do
+  get "dashboard/index"
+  get "query/index"
+  resources :connections
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

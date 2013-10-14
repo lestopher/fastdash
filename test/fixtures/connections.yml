@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  host: MyString
+  port: 1
+  socket: MyString
+  username: MyString
+  password: MyString
+  database: MyString
+  encoding: MyString
+
+two:
+  host: MyString
+  port: 1
+  socket: MyString
+  username: MyString
+  password: MyString
+  database: MyString
+  encoding: MyString
