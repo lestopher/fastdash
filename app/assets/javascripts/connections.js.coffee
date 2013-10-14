@@ -6,6 +6,7 @@
 
 main = ->
   $body = $(document.body)
+
   $body.on 'click', 'a', (ev) ->
     ev.stopPropagation()
 
