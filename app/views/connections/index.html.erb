@@ -1,6 +1,5 @@
-<h1>Listing connections</h1>
-
-<table>
+<h3>Current Connections</h3>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Host</th>
@@ -15,7 +14,6 @@
       <th></th>
     </tr>
   </thead>
-
   <tbody>
     <% @connections.each do |connection| %>
       <tr>
@@ -26,9 +24,11 @@
         <td><%= connection.password %></td>
         <td><%= connection.database %></td>
         <td><%= connection.encoding %></td>
-        <td><%= link_to 'Show', connection %></td>
-        <td><%= link_to 'Edit', edit_connection_path(connection) %></td>
-        <td><%= link_to 'Destroy', connection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <a href="<%= connection_path(connection) %>">Show</a>
+        </td>
+        <td><a href="<%= edit_connection_path(connection) %>"><span class="glyphicon glyphicon-edit"></span>Edit</a></td>
+        <td><%= link_to 'Delete', connection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Connection', new_connection_path %>
+<a href="<%= new_connection_path %>" class="btn btn-primary">New Connection</a>
