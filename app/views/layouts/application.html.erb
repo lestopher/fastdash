@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
 
     <% unless @js_application.nil? %>
+      <%= javascript_include_tag 'templates' %>
       <%= requirejs_include_tag @js_application %>
     <% else %>
       <%= javascript_include_tag "application" %>

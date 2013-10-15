@@ -5,7 +5,7 @@ define([
 ], function(Backbone, _, $) {
   var Application = function() {
 
-    this.initialize();
+    this.initialize.apply(this, arguments);
 
     return this;
   };

@@ -1,11 +1,13 @@
 define([
-  'base/application'
-], function(BaseApplication) {
+  'base/application',
+  'dashboard/dashboard.controller'
+], function(BaseApplication, DashboardController) {
 
   var DashboardApplication = BaseApplication.extend({
 
     start: function() {
-      alert("here");
+      this.controller = new DashboardController();
+      this.controller.setupViewProperties(this.$el);
     }
 
   });

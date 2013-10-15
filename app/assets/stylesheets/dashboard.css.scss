@@ -1,3 +1,45 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.dashboard-spot {
+  padding: 20px;
+
+  .spot-inner {
+    min-height: 200px;
+  }
+
+  &.empty {
+
+    .spot-inner {
+      border: 3px dashed #f5f5f5;
+    }
+
+    &.drop-hover {
+      .spot-inner {
+        border-color: #5A87C5;
+      }
+    }
+  }
+}
+
+.entity-choose-container {
+  position: fixed;
+  top: 51px;
+  bottom: 0px;
+  right: 0px;
+  width: 100px;
+  border-left: 1px solid #eee;
+  .entity-choice {
+    color: #aaa;
+    padding: 35px;
+    vertical-align: top;
+    font-size: 30px;
+    cursor: move;
+    span.glyphicon {
+      margin-top: -14px;
+    }
+    &:hover {
+      background: #fafafa;
+    }
+  }
+}

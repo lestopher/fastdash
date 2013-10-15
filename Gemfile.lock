@@ -52,6 +52,10 @@ GEM
     coffee-script-source (1.6.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    handlebars_assets (0.14.1)
+      execjs (>= 1.2.9)
+      sprockets (>= 2.0.3)
+      tilt
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.2)
@@ -132,6 +136,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass!
   coffee-rails (~> 4.0.0)
+  handlebars_assets
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails
