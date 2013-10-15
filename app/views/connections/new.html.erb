@@ -1,5 +1,10 @@
-<h1>New connection</h1>
+<div class="container">
+  <div class="col-lg-8">
+    <div class="page-header">
+      <h3>New connection</h3>
+    </div>
+    <%= render 'form' %>
+  </div>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', connections_path %>
+<a href="<%= connections_path %>" class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>

@@ -1,39 +1,54 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Host:</strong>
-  <%= @connection.host %>
-</p>
+  <% if @connection.host.to_s.length > 0 %>
+    <div class="row connection-row">
+      <div class="col-lg-2 text-right"><strong>Host:</strong></div>
+      <div class="col-lg-10"><%= @connection.host %></div>
+    </div>
+  <% end %>
 
-<p>
-  <strong>Port:</strong>
-  <%= @connection.port %>
-</p>
+  <% if @connection.port.to_s.length > 0 %>
+    <div class="row connection-row">
+      <div class="col-lg-2 text-right"><strong>Port:</strong></div>
+      <div class="col-lg-10"><%= @connection.port %></div>
+    </div>
+  <% end %>
 
-<p>
-  <strong>Socket:</strong>
-  <%= @connection.socket %>
-</p>
+  <% if @connection.socket.to_s.length > 0 %>
+    <div class="row connection-row">
+      <div class="col-lg-2 text-right"><strong>Socket:</strong></div>
+      <div class="col-lg-10"><%= @connection.socket %></div>
+    </div>
+  <% end %>
+  <% if @connection.username.to_s.length > 0 %>
+    <div class="row connection-row">
+      <div class="col-lg-2 text-right"><strong>Username:</strong></div>
+      <div class="col-lg-10"><%= @connection.username %></div>
+    </div>
+  <% end %>
 
-<p>
-  <strong>Username:</strong>
-  <%= @connection.username %>
-</p>
+  <% if @connection.password.to_s.length > 0 %>
+    <div class="row connection-row">
+      <div class="col-lg-2 text-right"><strong>Password:</strong></div>
+      <div class="col-lg-10"><%= @connection.password %></div>
+    </div>
+  <% end %>
 
-<p>
-  <strong>Password:</strong>
-  <%= @connection.password %>
-</p>
+  <% if @connection.database.to_s.length > 0 %>
+    <div class="row connection-row">
+      <div class="col-lg-2 text-right"><strong>Database:</strong></div>
+      <div class="col-lg-10"><%= @connection.database %></div>
+    </div>
+  <% end %>
 
-<p>
-  <strong>Database:</strong>
-  <%= @connection.database %>
-</p>
+  <% if @connection.encoding.to_s.length > 0 %>
+    <div class="row connection-row">
+      <div class="col-lg-2 text-right"><strong>Encoding:</strong></div>
+      <div class="col-lg-10"><%= @connection.encoding %></div>
+    </div>
+  <% end %>
 
-<p>
-  <strong>Encoding:</strong>
-  <%= @connection.encoding %>
-</p>
-
-<%= link_to 'Edit', edit_connection_path(@connection) %> |
-<%= link_to 'Back', connections_path %>
+  <%= link_to 'Edit', edit_connection_path(@connection) %> |
+  <%= link_to 'Back', connections_path %>
+</div>

@@ -5,6 +5,9 @@ Fastdash::Application.routes.draw do
 
   get "dashboard/index"
   get "query/index"
+
+  get 'dashboard' => 'dashboard#index'
+
   resources :connections
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -47,7 +50,7 @@ Fastdash::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

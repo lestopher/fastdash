@@ -12,7 +12,7 @@ group :development do
 end
 
 gem 'mysql'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git', branch: '3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -27,6 +27,8 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+
+gem 'simple_form'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
