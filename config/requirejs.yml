@@ -1,0 +1,3 @@
+paths:
+  backbone: 'lib/backbone'
+  underscore: 'lib/underscore'
