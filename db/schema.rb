@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013045909) do
+ActiveRecord::Schema.define(version: 20131014234318) do
+
+  create_table "connection_table_columns", force: true do |t|
+    t.string   "alias"
+    t.string   "columnname"
+    t.string   "columntype"
+    t.string   "grouping"
+    t.string   "foreignkey"
+    t.boolean  "display"
+    t.integer  "connection_table_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "null"
+  end
+
+  add_index "connection_table_columns", ["connection_table_id"], name: "index_connection_table_columns_on_connection_table_id"
+
+  create_table "connection_tables", force: true do |t|
+    t.string   "alias"
+    t.string   "tablename"
+    t.boolean  "display"
+    t.integer  "connection_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "connection_tables", ["connection_id"], name: "index_connection_tables_on_connection_id"
 
   create_table "connections", force: true do |t|
     t.string   "host"

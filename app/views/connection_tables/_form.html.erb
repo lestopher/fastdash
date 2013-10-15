@@ -1,0 +1,33 @@
+<%= form_for(@connection_table) do |f| %>
+  <% if @connection_table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@connection_table.errors.count, "error") %> prohibited this connection_table from being saved:</h2>
+
+      <ul>
+      <% @connection_table.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :alias %><br>
+    <%= f.text_field :alias %>
+  </div>
+  <div class="field">
+    <%= f.label :tablename %><br>
+    <%= f.text_field :tablename %>
+  </div>
+  <div class="field">
+    <%= f.label :display %><br>
+    <%= f.check_box :display %>
+  </div>
+  <div class="field">
+    <%= f.label :connection %><br>
+    <%= f.text_field :connection %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

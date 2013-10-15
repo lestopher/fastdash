@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alias:</strong>
+  <%= @connection_table.alias %>
+</p>
+
+<p>
+  <strong>Tablename:</strong>
+  <%= @connection_table.tablename %>
+</p>
+
+<p>
+  <strong>Display:</strong>
+  <%= @connection_table.display %>
+</p>
+
+<p>
+  <strong>Connection:</strong>
+  <%= @connection_table.connection %>
+</p>
+
+<%= link_to 'Edit', edit_connection_table_path(@connection_table) %> |
+<%= link_to 'Back', connection_tables_path %>
