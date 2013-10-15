@@ -35,6 +35,7 @@ class ConnectionTableColumnsController < ApplicationController
         format.json { render json: @connection_table_column.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /connection_table_columns/1

@@ -12,6 +12,19 @@ define([
       this.setupDrop();
     },
 
+    getElementAtSlot: function(slot) {
+
+      return this.$('[data-slot="' + slot + '"] .spot-inner');
+    },
+
+    chartDidSetupAtSlot: function(slot) {
+      var el = this.getElementAtSlot(slot);
+
+      el.parent().removeClass('empty');
+
+
+    },
+
     setupDrag: function() {
       var that = this;
 
@@ -19,7 +32,7 @@ define([
         helper: 'clone',
         cursor: 'move',
         revert: 'invalid'
-      })
+      });
     },
 
     setupDrop: function() {

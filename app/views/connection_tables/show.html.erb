@@ -15,10 +15,23 @@
   <%= @connection_table.display %>
 </p>
 
-<p>
-  <strong>Connection:</strong>
-  <%= @connection_table.connection %>
-</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Alias</th>
+      <th>Name</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @connection_table.connection_table_columns.each do |column| %>
+      <tr>
+        <td><%= column.alias %></td>
+        <td><%= column.columnname %></td>
+        <td><%= column.columntype %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to 'Edit', edit_connection_table_path(@connection_table) %> |
 <%= link_to 'Back', connection_tables_path %>

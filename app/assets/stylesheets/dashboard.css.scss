@@ -6,6 +6,11 @@
 
   .spot-inner {
     min-height: 200px;
+    &.open-settings {
+      .chart-settings {
+        display: block;
+      }
+    }
   }
 
   &.empty {
@@ -20,6 +25,38 @@
       }
     }
   }
+
+  .chart-header {
+    line-height: 20px;
+    background: #f5f5f5;
+  }
+
+  .chart-body {
+    height: 200px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .chart-settings {
+    display: none;
+    background: #f5f5f5;
+    padding: 5px;
+  }
+
+  .chart-footer {
+    background: #f5f5f5;
+    color: #a0a0a0;
+    font-size: 18px;
+    padding: 0px 5px;
+    line-height: 30px;
+    border-radius: 0px 0px 4px 4px;
+    .settings-icon {
+      cursor: pointer;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+
 }
 
 .entity-choose-container {

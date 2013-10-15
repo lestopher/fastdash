@@ -19,7 +19,7 @@ define([
     },
 
     viewIsReady: function() {
-
+      this.view.render();
     },
 
     setupViewProperties: function(el) {
