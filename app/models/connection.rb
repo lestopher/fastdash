@@ -1,5 +1,6 @@
 class Connection < ActiveRecord::Base
   validates :host, :username, :password, :database, presence: true
+  has_many :connection_tables, :dependent => :destroy
 
   def connection_info
     {

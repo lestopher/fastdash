@@ -1,0 +1,31 @@
+<h1>Listing connection_tables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alias</th>
+      <th>Tablename</th>
+      <th>Display</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @connection_tables.each do |connection_table| %>
+      <tr>
+        <td><%= connection_table.alias %></td>
+        <td><%= connection_table.tablename %></td>
+        <td><%= connection_table.display %></td>
+        <td><%= link_to 'Show', connection_table %></td>
+        <td><%= link_to 'Edit', edit_connection_table_path(connection_table) %></td>
+        <td><%= link_to 'Destroy', connection_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Connection table', new_connection_table_path %>

@@ -1,4 +1,8 @@
 Fastdash::Application.routes.draw do
+  resources :connection_table_columns
+
+  resources :connection_tables
+
   get "dashboard/index"
   get "query/index"
   resources :connections

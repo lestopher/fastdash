@@ -28,6 +28,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       if @connection.save
+        build_schema(@connection)
         format.html { redirect_to @connection, notice: 'Connection was successfully created.' }
         format.json { render action: 'show', status: :created, location: @connection }
       else
@@ -42,6 +43,7 @@ class ConnectionsController < ApplicationController
   def update
     respond_to do |format|
       if @connection.update(connection_params)
+        build_schema(@connection)
         format.html { redirect_to @connection, notice: 'Connection was successfully updated.' }
         format.json { head :no_content }
       else
@@ -70,5 +72,39 @@ class ConnectionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def connection_params
       params.require(:connection).permit(:host, :port, :socket, :username, :password, :database, :encoding)
+    end
+
+    def build_schema(connection)
+      link = Link.establish_connection(connection.connection_info)
+      tables = link.connection.tables
+      connection.connection_tables.delete_all
+      tables.each do |table|
+        newTable = connection.connection_tables.build(:alias=>table, :tablename=>table, :display=>true)
+        newTable.save
+
+        newTableColumns = link.connection.columns(table)
+        newTableColumns.each do |column|
+
+          # t.string   "alias"
+          # t.string   "columnname"
+          # t.string   "columntype"
+          # t.string   "grouping"
+          # t.string   "foreignkey"
+          # t.boolean  "display"
+          # t.integer  "connection_table_id"
+          # t.datetime "created_at"
+          # t.datetime "updated_at"
+          # t.boolean  "null"
+          newColumn = newTable.connection_table_columns.build(
+            :alias => column.name,
+            :columnname => column.name,
+            :columntype => column.sql_type,
+            :grouping => "Dimension",
+            :foreignkey => nil,
+            :display => true,
+            :null => column.null)
+          newColumn.save
+        end
+      end
     end
 end

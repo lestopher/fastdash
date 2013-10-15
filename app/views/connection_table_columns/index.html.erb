@@ -1,0 +1,39 @@
+<h1>Listing connection_table_columns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alias</th>
+      <th>Columnname</th>
+      <th>Type</th>
+      <th>Grouping</th>
+      <th>Foreignkey</th>
+      <th>Display</th>
+      <th>Null</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @connection_table_columns.each do |connection_table_column| %>
+      <tr>
+        <td><%= connection_table_column.alias %></td>
+        <td><%= connection_table_column.columnname %></td>
+        <td><%= connection_table_column.columntype %></td>
+        <td><%= connection_table_column.grouping %></td>
+        <td><%= connection_table_column.foreignkey %></td>
+        <td><%= connection_table_column.display %></td>
+        <td><%= connection_table_column.null %></td>
+        <td><%= link_to 'Show', connection_table_column %></td>
+        <td><%= link_to 'Edit', edit_connection_table_column_path(connection_table_column) %></td>
+        <td><%= link_to 'Destroy', connection_table_column, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Connection table column', new_connection_table_column_path %>

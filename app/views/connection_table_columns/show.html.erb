@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alias:</strong>
+  <%= @connection_table_column.alias %>
+</p>
+
+<p>
+  <strong>Columnname:</strong>
+  <%= @connection_table_column.columnname %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @connection_table_column.type %>
+</p>
+
+<p>
+  <strong>Grouping:</strong>
+  <%= @connection_table_column.grouping %>
+</p>
+
+<p>
+  <strong>Foreignkey:</strong>
+  <%= @connection_table_column.foreignkey %>
+</p>
+
+<p>
+  <strong>Display:</strong>
+  <%= @connection_table_column.display %>
+</p>
+
+<p>
+  <strong>Connection table:</strong>
+  <%= @connection_table_column.connection_table %>
+</p>
+
+<%= link_to 'Edit', edit_connection_table_column_path(@connection_table_column) %> |
+<%= link_to 'Back', connection_table_columns_path %>
