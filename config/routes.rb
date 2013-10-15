@@ -1,15 +1,14 @@
 Fastdash::Application.routes.draw do
+  resources :connections
   resources :connection_table_columns
-
   resources :connection_tables
 
   get "dashboard/index"
   get "query/index"
-
   get 'dashboard' => 'dashboard#index'
 
-  resources :connections
-
+  root 'dashboard#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
