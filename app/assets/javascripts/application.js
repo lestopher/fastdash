@@ -16,4 +16,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require_tree .
+//= require jquery.ui.core
+//= require jquery.ui.widget
+//= require jquery.ui.mouse
+//= require jquery.ui.position
+//= require jquery.ui.draggable
+//= require jquery.ui.droppable
+//= require jquery.ui.resizable
+//= require jquery.ui.selectable
+//= require jquery.ui.sortable
+//= require jquery.ui.effect.all
+// require_tree .

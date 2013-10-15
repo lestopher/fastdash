@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/jwhitley/requirejs-rails.git
+  revision: f2330104aeca4d193fd5680a22ae7eee85d814b5
+  specs:
+    requirejs-rails (0.9.1)
+      railties (>= 3.1.1, < 4.1)
+
+GIT
   remote: https://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: 0e88056ac5d58fb0bbd23d3fe929eac01712d964
   branch: 3
@@ -53,6 +60,8 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (4.0.5)
+      railties (>= 3.1.0)
     json (1.8.0)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -125,9 +134,11 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  jquery-ui-rails
   mysql
   pg
   rails (= 4.0.0)
+  requirejs-rails!
   sass-rails (~> 4.0.0)
   sdoc
   simple_form
