@@ -1,4 +1,16 @@
 GIT
+  remote: git://github.com/heroku/rails3_serve_static_assets.git
+  revision: 84910ceb4ca2851d650e66d3b22f5008acf253f8
+  specs:
+    rails3_serve_static_assets (0.0.1)
+
+GIT
+  remote: git://github.com/heroku/rails_log_stdout.git
+  revision: 01b5bcc572e3baed1618f4068920dd83bd491fb2
+  specs:
+    rails_log_stdout (0.0.1)
+
+GIT
   remote: git://github.com/jwhitley/requirejs-rails.git
   revision: f2330104aeca4d193fd5680a22ae7eee85d814b5
   specs:
@@ -138,6 +150,8 @@ DEPENDENCIES
   mysql
   pg
   rails (= 4.0.0)
+  rails3_serve_static_assets!
+  rails_log_stdout!
   requirejs-rails!
   sass-rails (~> 4.0.0)
   sdoc
