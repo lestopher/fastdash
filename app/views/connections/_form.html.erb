@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <%#
+      Once this project gets bigger, going to have to pass in the collection as a variable, because this
+      isn't sustainable
+  %>
+  <%= f.input :adapter, collection: [['MySql', 'mysql'], ['Postgres', 'postgresql']], label: 'Adapter' %>
   <%= f.input :host, label: 'Host' %>
   <%= f.input :port, label: 'Port' %>
   <%= f.input :socket, label: 'Socket' %>
