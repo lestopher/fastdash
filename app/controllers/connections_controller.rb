@@ -71,7 +71,7 @@ class ConnectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def connection_params
-      params.require(:connection).permit(:host, :port, :socket, :username, :password, :database, :encoding)
+      params.require(:connection).permit(:adapter, :host, :port, :socket, :username, :password, :database, :encoding)
     end
 
     def build_schema(connection)
