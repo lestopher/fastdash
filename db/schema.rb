@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131014234318) do
+ActiveRecord::Schema.define(version: 20131017032438) do
 
   create_table "connection_table_columns", force: true do |t|
     t.string   "alias"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20131014234318) do
     t.string   "encoding"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "adapter"
   end
 
   create_table "queries", force: true do |t|
