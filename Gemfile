@@ -9,6 +9,9 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'pry'
+  gem 'pry-debugger'
+  gem 'pg'
 end
 
 gem 'mysql'
